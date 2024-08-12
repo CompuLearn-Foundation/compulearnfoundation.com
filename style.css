@@ -80,7 +80,7 @@ header {
 
 
 .hero {
-  background: url('assets/students-1807505.jpg') no-repeat center center;
+  background: url('assets/students-1807505.jpg');
   background-size: cover;
   color: #fff;
   padding: 100px 20px;
