@@ -52,7 +52,6 @@ header {
   background-color: transparent;
   padding-left: 100px; /* Adjust these values as needed */
   padding-right: 100px;
-
 }
 
 .mb-4 {
@@ -64,7 +63,6 @@ header {
   padding: 0;
   margin: 0;
   display: inline;
-
 }
 
 .nav-link {
@@ -77,7 +75,6 @@ header {
   padding: 0;
   display: inline-block;
 }
-
 
 .hero {
   background: url('assets/students-1807505.jpg') center center;
@@ -94,10 +91,10 @@ header {
   justify-content: center;
 }
 
-.btn{
+.btn {
   color: white;
   border-color: black;
-  font-family: Bai jamjuree;
+  font-family: 'Libre Caslon Condensed';
   font-size: 16px;
 }
 
@@ -116,13 +113,16 @@ header {
   text-align: center;
 }
 
-.btn-primary {
+.btn-primary, .btn-outline-secondary, .btn-lg {
   background-color: #1E272D;
   border-color: #1E272D;
+  color: #fff;
   box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+  font-family: 'Libre Caslon Condensed';
+  font-size: 16px;
 }
 
-.btn-primary:hover {
+.btn-primary:hover, .btn-outline-secondary:hover, .btn-lg:hover {
   background-color: #182024;
   border-color: #182024;
   box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
@@ -148,11 +148,9 @@ footer a {
   text-decoration: none;
 }
 
-  footer img {
-    filter: invert(100%);
-  }
-
-
+footer img {
+  filter: invert(100%);
+}
 
 footer a:hover {
   text-decoration: underline;
