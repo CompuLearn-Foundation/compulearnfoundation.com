@@ -7,7 +7,7 @@
 
 body {
   font-family: 'Libre Caslon Condensed';
-  background-color: #f4f4f4;
+  background-color: #f8f9fa;
   margin: 0;
   padding: 0;
 }
@@ -128,12 +128,127 @@ header {
   box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
 }
 
-.section {
-  padding: 60px 20px;
+/* Modern section styling */
+.section{
+  padding: 80px 0;
+  background-color: #f8f9fa;
+  position: relative;
+  overflow: hidden;
 }
 
-.section.bg-light {
-  background-color: #e9ecef;
+.section2 {
+  background-color: #f8f9fa;
+  position: relative;
+  overflow: hidden;
+  padding-bottom: 80px;
+}
+
+.section::before, .section2::before {
+  content: '';
+  position: absolute;
+  top: -50px;
+  left: -50px;
+  width: 100px;
+  height: 100px;
+  background-color: rgba(0, 123, 255, 0.1);
+  border-radius: 50%;
+  z-index: 0;
+}
+
+.section::after, .section2::after {
+  content: '';
+  position: absolute;
+  bottom: -30px;
+  right: -30px;
+  width: 100px;
+  height: 100px;
+  background-color: rgba(0, 123, 255, 0.15);
+  border-radius: 50%;
+  z-index: 0;
+}
+
+.section, .section2, .container {
+  max-width: 1000px;
+  margin: 0 auto;
+  position: relative;
+  z-index: 1;
+}
+
+.section h2, .section2 h2 {
+  font-size: 2.8rem;
+  font-weight: 700;
+  color: #333;
+  margin-bottom: 40px;
+  text-align: center;
+  position: relative;
+}
+
+.section h2::after, .section2 h2::after {
+  content: '';
+  display: block;
+  width: 50px;
+  height: 3px;
+  background-color: #007bff;
+  margin: 20px auto 0;
+}
+
+.section p, .section2 p {
+  font-size: 1.2rem;
+  line-height: 1.8;
+  color: #555;
+  margin-bottom: 30px;
+}
+
+.section ul, .section2 ul {
+  list-style-type: none;
+  padding-left: 0;
+  margin-bottom: 40px;
+}
+
+.section li, .section2 li {
+  font-size: 1.1rem;
+  line-height: 1.6;
+  color: #555;
+  margin-bottom: 15px;
+  padding-left: 30px;
+  position: relative;
+}
+
+.section li::before, .section2 li::before {
+  content: "→";
+  color: #007bff;
+  font-size: 1.2rem;
+  position: absolute;
+  left: 0;
+  top: 2px;
+}
+
+.section .btn, .section2 .btn {
+  margin-top: 30px;
+  font-size: 1.1rem;
+  padding: 12px 30px;
+  border-radius: 50px;
+  transition: all 0.3s ease;
+  background-color: #007bff;
+  color: #fff;
+  border: none;
+  display: inline-block;
+}
+
+.section .btn:hover, .section2 .btn:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 6px 15px rgba(0, 123, 255, 0.3);
+  background-color: #0056b3;
+}
+
+@media (max-width: 768px) {
+  .section, .section2 {
+    padding: 60px 20px;
+  }
+  
+  .section h2, .section2 h2 {
+    font-size: 2.2rem;
+  }
 }
 
 footer {
@@ -148,10 +263,9 @@ footer a {
   text-decoration: none;
 }
 
-  footer img {
-    filter: invert(100%);
-  }
-
+footer img {
+  filter: invert(100%);
+}
 
 
 footer a:hover {
